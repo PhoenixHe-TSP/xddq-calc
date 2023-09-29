@@ -36,3 +36,9 @@
     transform: rotate(360deg);
   }
 }
+
+@font-face {
+  font-family: 'UKaiCN';
+  font-style: normal;
+  src: url('/public/fonts/UKaiCN-01.ttf');
+}

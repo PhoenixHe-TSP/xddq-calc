@@ -1,26 +1,41 @@
-import React from 'react';
-import logo from '@/logo.svg';
-import '@/App.css';
+import React, { useState } from "react";
+import "@/App.css";
+import {
+  FluentProvider,
+  teamsDarkTheme,
+  makeStyles,
+  Theme,
+} from "@fluentui/react-components";
+import { PageHeaderView } from "@/components/PageHeader";
+import { HeaderState } from "./observable/HeaderState";
+import { PageContentView } from "./components/PageContent";
 
-function App() {
+const useAppStyles = makeStyles({
+  root: {
+    position: "absolute",
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
+    display: "flex",
+    flexDirection: "column",
+  },
+});
+
+const theme: Theme = {
+  ...teamsDarkTheme,
+};
+
+export const App = () => {
+  const [headerState] = useState(() => new HeaderState());
+  const appStyle = useAppStyles();
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <FluentProvider theme={theme}>
+      <div className={appStyle.root}>
+        <PageContentView headerState={headerState} />
+        <PageHeaderView headerState={headerState} />
+      </div>
+    </FluentProvider>
   );
-}
-
-export default App;
+};
