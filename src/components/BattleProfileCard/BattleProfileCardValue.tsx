@@ -1,5 +1,6 @@
 import { BattleProfile } from "@/observable/BattleProfile";
 import { BaseProperty } from "@/observable/properties/BaseProperty";
+import { mergeStyles } from "@fluentui/react";
 import { Label, makeStyles } from "@fluentui/react-components";
 
 const useBattleProfileCardValueStyles = makeStyles({
@@ -7,10 +8,9 @@ const useBattleProfileCardValueStyles = makeStyles({
     display: "flex",
     flexDirection: "row",
     width: "100px",
-    color: "#f3e2a5",
   },
   label: {
-    color: "#b2c3c8",
+    color: "var(--colorNeutralForeground2)",
     marginRight: "4px",
   },
   value: {},
@@ -47,7 +47,7 @@ const CardValue = (props: BattleProfileCardValueProps) => {
 
   return (
     <span className={styles.root}>
-      <Label className={styles.label}>{displayName}:</Label>
+      <Label className={mergeStyles(styles.label)}>{displayName}:</Label>
       {displayValue}
     </span>
   );

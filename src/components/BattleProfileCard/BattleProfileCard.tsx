@@ -14,16 +14,14 @@ import { resistProperties } from "@/observable/properties/ResistProperties";
 
 const useBattleProfileCardStyles = makeStyles({
   root: {
-    backgroundColor: "#304146",
-    color: "#f3e2a5",
+    maxWidth: "400px",
   },
   propertyContainer: {
     display: "flex",
     flexDirection: "row",
     flexWrap: "wrap",
     justifyContent: "space-between",
-    backgroundColor: "#304146",
-    ...shorthands.borderTop("4px", "solid", "#3c595e"),
+    ...shorthands.borderTop("4px", "solid", "var(--colorNeutralBackground2)"),
     ...shorthands.margin("-10px", "-12px", "-6px", "-12px"),
     ...shorthands.padding("8px", "12px"),
   },

@@ -24,6 +24,10 @@ const useAppStyles = makeStyles({
 
 const theme: Theme = {
   ...teamsDarkTheme,
+  colorNeutralForeground1: "#f3e2a5",
+  colorNeutralBackground1: "#304146",
+  colorNeutralForeground2: "#b2c3c8",
+  colorNeutralBackground2: "#3c595e",
 };
 
 export const App = () => {
