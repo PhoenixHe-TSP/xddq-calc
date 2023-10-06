@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/xddq-calc/static/css/main.6359df36.css",
+    "main.js": "/xddq-calc/static/js/main.c8f91385.js",
+    "static/js/787.9752d2e4.chunk.js": "/xddq-calc/static/js/787.9752d2e4.chunk.js",
+    "static/media/UKaiCN-01.ttf": "/xddq-calc/static/media/UKaiCN-01.cc1e3583c1412e735dc3.ttf",
+    "index.html": "/xddq-calc/index.html",
+    "main.6359df36.css.map": "/xddq-calc/static/css/main.6359df36.css.map",
+    "main.c8f91385.js.map": "/xddq-calc/static/js/main.c8f91385.js.map",
+    "787.9752d2e4.chunk.js.map": "/xddq-calc/static/js/787.9752d2e4.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6359df36.css",
+    "static/js/main.c8f91385.js"
+  ]
+}
